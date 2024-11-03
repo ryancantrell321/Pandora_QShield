@@ -1,0 +1,7 @@
+Kivy[Full]
+portalocker
+python_docx
+olefile
+future
+psutil
+docx

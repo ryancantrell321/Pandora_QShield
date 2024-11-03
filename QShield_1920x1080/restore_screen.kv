@@ -1,0 +1,320 @@
+<RestoreScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgba: 0, 0.027, 0.122, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Image:
+            source: "background.png"
+            allow_stretch: True
+            keep_ratio: False
+            size_hint: None, None
+            size: root.width, root.height
+
+        # Logo
+        Image:
+            source: "Logo.png"
+            keep_ratio: True
+            allow_stretch: True
+            size_hint: None, None
+            size: 300, 300
+            pos_hint: {"center_x": 0.28, "center_y": 0.6}
+
+#
+#        CustomTitleBar:
+#            title_label: self.title_label
+#            title_icon: self.title_icon
+
+
+# Configured File Location Labels:
+
+        RelativeLayout:
+            orientation: "vertical"
+            size_hint: None, None
+            pos_hint: {"center_x": 0.5, "center_y": 0.7}
+            spacing: dp(20)
+            padding: dp(20)
+
+            RelativeLayout:
+                orientation: "vertical"
+                size_hint: None, None
+                spacing: dp(30)
+
+                BoxLayout:
+                    orientation: "vertical"
+                    size_hint: None, None
+                    size: self.minimum_size
+                    spacing: dp(10)
+
+                    Label:
+                        text: "NOTE: MAKE SURE qBittorrent IS NOT RUNNING!"
+                        font_name: "Montserrat-Bold.ttf"
+                        font_size: 16
+                        color: (0.941, 0.894, 0.078, 1)
+                        size_hint: None, None
+                        size: 450, 25
+                        halign: "center"
+                        valign: "middle"
+                        text_size: self.size
+
+                    Label:
+                        text: "Selected Folders to Restore to:"
+                        font_name: "Montserrat-Bold.ttf"
+                        font_size: 18
+                        size_hint: None, None
+                        size: 450, 25
+                        halign: "left"
+                        valign: "middle"
+                        text_size: self.size
+
+                    Label:
+                        canvas.before:
+                            Color:
+                                rgba: (1, 1, 1, 1)
+                            RoundedRectangle:
+                                pos: self.pos
+                                size: self.size
+                        text: """%localappdata%/qBittorrent"""
+                        font_name: "Montserrat-Medium.ttf"
+                        font_size: 20
+                        halign: "center"
+                        valign: "middle"
+                        size_hint: None, None
+                        size: 475, 40
+                        color: (0, 0, 0, 0.6)
+                        focus: True
+
+
+                    Label:
+                        canvas.before:
+                            Color:
+                                rgba: (1, 1, 1, 1)
+                            RoundedRectangle:
+                                pos: self.pos
+                                size: self.size
+
+                        text: """%appdata%/qBittorrent"""
+                        font_name: "Montserrat-Medium.ttf"
+                        font_size: 20
+                        halign: "center"
+                        valign: "middle"
+                        size_hint: None, None
+                        size: 475, 40
+                        color: (0, 0, 0, 0.6)
+                        focus: True
+
+# backup selection label:
+
+        RelativeLayout:
+            orientation: "vertical"
+            size_hint: None, None
+            pos_hint: {"center_x": 0.5, "center_y": 0.6}
+            spacing: dp(20)
+            padding: dp(20)
+
+            BoxLayout:
+                orientation: "vertical"
+                size_hint: None, None
+                size: self.minimum_size
+                spacing: dp(10)
+
+                Label:
+                    text: "Restoration File:"
+                    font_name: "Montserrat-Bold.ttf"
+                    font_size: 18
+                    size_hint: None, None
+                    size: 500, 50
+                    halign: "left"
+                    valign: "middle"
+                    text_size: self.size
+
+                Label:
+                    canvas.before:
+                        Color:
+                            rgba: (1, 1, 1, 1)
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+
+                    text: root.selected_restore_file
+                    font_name: "Montserrat-Medium.ttf"
+                    font_size: 13.5
+                    halign: "center"
+                    valign: "middle"
+                    size_hint: None, None
+
+                    size: 500, 50
+                    color: (0, 0, 0, 0.6)
+                    focus: True
+
+
+            RelativeLayout:
+                size_hint: None, None
+                size: 500, 35
+                pos_hint: {"center_x": 0.5}
+
+                canvas.before:
+                    Color:
+                        rgba: 0.2, 0.2, 0.2, 1
+                    RoundedRectangle:
+                        size: self.size
+                        pos: 200, -60
+                        radius: [10,]
+
+                canvas:
+                    Color:
+                        rgba: 0, 0.4, 0, 1
+
+                    RoundedRectangle:
+                        size: self.width * root.progress / 100, self.height
+                        pos: 200, -60
+                        radius: [10,]
+
+                Label:
+                    text: f"{int(root.progress)}%"
+                    size_hint: None, None
+                    size: self.size
+                    pos_hint: {"center_x": 0.9, "center_y": -1.2 }
+                    color: 1, 1, 1, 1
+                    font_name: "Montserrat-Bold.ttf"
+                    font_size: 18
+                    halign: "center"
+                    valign: "middle"
+                    text_size: self.size
+
+# Buttons:
+
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: None, None
+            width: dp(600)
+            height: dp(500)
+            pos_hint: {"center_x": 0.723, "center_y": 0.5}
+            spacing: dp(10)
+
+            GridLayout:
+                cols: 2
+                spacing: dp(15)
+                size_hint: 0.9, None
+                height: dp(80) * 2
+
+                Button:
+                    text: "Select Restoration File"
+                    font_name: "Montserrat-Bold.ttf"
+                    font_size: 18
+                    text_size: self.size
+                    halign: "center"
+                    valign: "middle"
+                    color: 1, 1, 1, 1
+                    size_hint_x: 0.7
+                    background_color: (0.051, 0.231, 0, 1) if self.state == "normal" else (0.082, 0.38, 0, 1)
+                    background_normal: ""
+                    background_down: ""
+                    on_release: root.select_restore_location()
+
+
+
+                Button:
+                    text: "Restore Data"
+                    font_name: "Montserrat-Bold.ttf"
+                    font_size: 18
+                    size_hint_x: 0.7
+                    text_size: self.size
+                    halign: "center"
+                    valign: "middle"
+                    color: 1, 1, 1, 1
+                    background_color: (0.051, 0.231, 0, 1) if self.state == "normal" else (0.082, 0.38, 0, 1)
+                    background_normal: ""
+                    background_down: ""
+                    on_release: root.restore_data()
+
+
+                Button:
+                    text: "View Logs"
+                    font_name: "Montserrat-Bold.ttf"
+                    font_size: 18
+                    size_hint_x: 0.7
+                    text_size: self.size
+                    halign: "center"
+                    valign: "middle"
+                    color: 1, 1, 1, 1
+                    background_color: (0.051, 0.231, 0, 1) if self.state == "normal" else (0.082, 0.38, 0, 1)
+                    background_normal: ""
+                    background_down: ""
+                    on_release: root.open_logs("/Logs/events.docx")
+
+
+                Button:
+                    text: "Guide"
+                    font_name: "Montserrat-Bold.ttf"
+                    font_size: 18
+                    size_hint_x: 0.7
+                    text_size: self.size
+                    halign: "center"
+                    valign: "middle"
+                    color: 1, 1, 1, 1
+                    background_color: (0.051, 0.231, 0, 1) if self.state == "normal" else (0.082, 0.38, 0, 1)
+                    background_normal: ""
+                    background_down: ""
+                    on_release: root.restore_guide()
+
+
+
+                Button:
+                    text: "Main Menu"
+                    font_name: "Montserrat-Bold.ttf"
+                    font_size: 18
+                    size_hint_x: 0.7
+                    text_size: self.size
+                    halign: "center"
+                    valign: "middle"
+                    color: 1, 1, 1, 1
+                    background_color: (0.051, 0.231, 0, 1) if self.state == "normal" else (0.082, 0.38, 0, 1)
+                    background_normal: ""
+                    background_down: ""
+                    on_release: app.root.current = "main"
+
+
+
+                Button:
+                    text: "Exit"
+                    font_name: "Montserrat-Bold.ttf"
+                    font_size: 18
+                    size_hint_x: 0.7
+                    text_size: self.size
+                    halign: "center"
+                    valign: "middle"
+                    color: 1, 1, 1, 1
+                    background_color: (0.051, 0.231, 0, 1) if self.state == "normal" else (0.082, 0.38, 0, 1)
+                    background_normal: ""
+                    background_down: ""
+                    on_release: root.exit_system()
+
+
+
+
+
+        # Footer
+        BoxLayout:
+            size_hint_y: None
+            height: dp(35)
+            pos_hint: {"x": 0, "y": 0}
+
+            canvas.before:
+                Color:
+                    rgba: (0, 0.4, 0.204, 1)
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Label:
+                text: root.current_year
+                font_name: "Montserrat-Medium.ttf"
+                font_size: 18
+                color: (1, 1, 1, 1)
+                halign: "center"
+                valign: "middle"
+                text_size: self.size
