@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pandora QShield README</title>
+    
 </head>
 <body style="font-family: Arial, sans-serif; margin: 0% 10% 0% 10%">
 
@@ -22,6 +22,8 @@
     <img src="https://img.shields.io/badge/python-3.12-darkgreen" alt="Python 3.12">
     <img src="https://img.shields.io/badge/kivy-2.3.0-purple" alt="Kivy 2.3.0">
     <img src="https://img.shields.io/badge/GPL-v3.0-orangered" alt="GPL v3.0">
+    <img alt="GitHub Downloads (all assets, all releases)" src="https://img.shields.io/github/downloads/ryancantrell321/Pandora_QShield/total">
+
 </div>
 
 <h2>⬇️ Downloads:</h2>
@@ -38,7 +40,7 @@
         <tr>
             <td style="border: 1px solid black;">1920x1080</td>
             <td style="border: 1px solid black;">
-                <a href="https://ibb.co.com/TqF4zqH">
+                <a href="https://github.com/ryancantrell321/Pandora_QShield/releases/download/v1.1/QShield_1920x1080.zip">
                     <img src="https://i.ibb.co.com/jZ1y7ZL/68747470733a2f2f692e6962622e636f2f395a7a6e5678502f446f776e6c6f61642d427574746f6e2d5472616e7370617265.png" style="max-width: 100%; height: auto;" alt="Download">
                 </a>
             </td>
@@ -47,7 +49,7 @@
         <tr>
             <td style="border: 1px solid black;">1366x768</td>
             <td style="border: 1px solid black;">
-                <a href="https://ibb.co.com/TqF4zqH">
+                <a href="https://github.com/ryancantrell321/Pandora_QShield/releases/download/v1.1/QShield_1366x768.zip">
                     <img src="https://i.ibb.co.com/jZ1y7ZL/68747470733a2f2f692e6962622e636f2f395a7a6e5678502f446f776e6c6f61642d427574746f6e2d5472616e7370617265.png" style="max-width: 100%; height: auto;" alt="Download">
                 </a>
             </td>
@@ -156,6 +158,27 @@
 <p style="text-align: justify; font-size: 16px;">
     Planned features include password-protected secure backups and cloud storage support.
 </p>
+
+<h2>💿 Virus Scan Results</h2>
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <td style="text-align: center;">QShield_1920x1080.exe</td>
+        <td style="text-align: center;"><a href="https://virusscan.jotti.org/en-US/filescanjob/7sehuf5uhf" target="_blank">https://virusscan.jotti.org/en-US/filescanjob/7sehuf5uhf</a></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">QShield_1920x1080.zip</td>
+        <td style="text-align: center;"><a href="https://virusscan.jotti.org/en-US/filescanjob/quwkgxe18f" target="_blank">https://virusscan.jotti.org/en-US/filescanjob/quwkgxe18f</a></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">QShield_1366x768.exe</td>
+        <td style="text-align: center;"><a href="https://virusscan.jotti.org/en-US/filescanjob/lcxyfq3uwr" target="_blank">https://virusscan.jotti.org/en-US/filescanjob/lcxyfq3uwr</a></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">QShield_1366x768.zip</td>
+        <td style="text-align: center;"><a href="https://virusscan.jotti.org/en-US/filescanjob/zccmlnvnyh" target="_blank">https://virusscan.jotti.org/en-US/filescanjob/zccmlnvnyh</a></td>
+    </tr>
+</table>
+
 
 <h2>📞 Contact Us or Report a Bug</h2>
 <p style="text-align: justify; font-size: 16px;">
