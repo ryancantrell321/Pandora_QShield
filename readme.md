@@ -38,7 +38,7 @@
         <tr>
             <td style="border: 1px solid black;">1920x1080</td>
             <td style="border: 1px solid black;">
-                <a href="https://ibb.co.com/TqF4zqH">
+                <a href="https://github.com/ryancantrell321/Pandora_QShield/releases/download/v1.1/QShield_1920x1080.zip">
                     <img src="https://i.ibb.co.com/jZ1y7ZL/68747470733a2f2f692e6962622e636f2f395a7a6e5678502f446f776e6c6f61642d427574746f6e2d5472616e7370617265.png" style="max-width: 100%; height: auto;" alt="Download">
                 </a>
             </td>
@@ -47,7 +47,7 @@
         <tr>
             <td style="border: 1px solid black;">1366x768</td>
             <td style="border: 1px solid black;">
-                <a href="https://ibb.co.com/TqF4zqH">
+                <a href="https://github.com/ryancantrell321/Pandora_QShield/releases/download/v1.1/QShield_1366x768.zip">
                     <img src="https://i.ibb.co.com/jZ1y7ZL/68747470733a2f2f692e6962622e636f2f395a7a6e5678502f446f776e6c6f61642d427574746f6e2d5472616e7370617265.png" style="max-width: 100%; height: auto;" alt="Download">
                 </a>
             </td>
