@@ -20,7 +20,7 @@
             keep_ratio: True
             allow_stretch: True
             size_hint: None, None
-            size: 300, 300
+            size: 500, 500
             pos_hint: {"center_x": 0.28, "center_y": 0.6}
 
 #
@@ -34,7 +34,7 @@
         RelativeLayout:
             orientation: "vertical"
             size_hint: None, None
-            pos_hint: {"center_x": 0.5, "center_y": 0.7}
+            pos_hint: {"center_x": 0.6, "center_y": 0.7}
             spacing: dp(20)
             padding: dp(20)
 
@@ -52,10 +52,10 @@
                     Label:
                         text: "NOTE: MAKE SURE qBittorrent IS NOT RUNNING!"
                         font_name: "Montserrat-Bold.ttf"
-                        font_size: 16
+                        font_size: 18
                         color: (0.941, 0.894, 0.078, 1)
                         size_hint: None, None
-                        size: 450, 25
+                        size: 500, 50
                         halign: "center"
                         valign: "middle"
                         text_size: self.size
@@ -65,7 +65,7 @@
                         font_name: "Montserrat-Bold.ttf"
                         font_size: 18
                         size_hint: None, None
-                        size: 450, 25
+                        size: 500, 50
                         halign: "left"
                         valign: "middle"
                         text_size: self.size
@@ -83,7 +83,7 @@
                         halign: "center"
                         valign: "middle"
                         size_hint: None, None
-                        size: 475, 40
+                        size: 500, 50
                         color: (0, 0, 0, 0.6)
                         focus: True
 
@@ -102,7 +102,7 @@
                         halign: "center"
                         valign: "middle"
                         size_hint: None, None
-                        size: 475, 40
+                        size: 500, 50
                         color: (0, 0, 0, 0.6)
                         focus: True
 
@@ -111,7 +111,7 @@
         RelativeLayout:
             orientation: "vertical"
             size_hint: None, None
-            pos_hint: {"center_x": 0.5, "center_y": 0.6}
+            pos_hint: {"center_x": 0.6, "center_y": 0.569}
             spacing: dp(20)
             padding: dp(20)
 
@@ -296,11 +296,10 @@
 
 
 
-
         # Footer
         BoxLayout:
             size_hint_y: None
-            height: dp(35)
+            height: dp(50)
             pos_hint: {"x": 0, "y": 0}
 
             canvas.before:
@@ -313,7 +312,7 @@
             Label:
                 text: root.current_year
                 font_name: "Montserrat-Medium.ttf"
-                font_size: 18
+                font_size: 20
                 color: (1, 1, 1, 1)
                 halign: "center"
                 valign: "middle"

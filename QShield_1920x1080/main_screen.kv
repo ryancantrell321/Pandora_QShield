@@ -21,7 +21,7 @@
             keep_ratio: True
             allow_stretch: True
             size_hint: None, None
-            size: 300, 300
+            size: 500, 500
             pos_hint: {"center_x": 0.5, "center_y": 0.75}
 
 #
@@ -35,7 +35,7 @@
             orientation: "vertical"
             size_hint: None, None
             width: dp(600)
-            height: dp(430)
+            height: dp(500)
             pos_hint: {"center_x": 0.459, "center_y": 0.55}
             spacing: dp(10)
 
@@ -43,7 +43,7 @@
                 cols: 2
                 spacing: dp(15)
                 size_hint: 1.3, None
-                height: dp(80) * 2
+                height: dp(100) * 2
 
                 Button:
                     text: "Backup QBittorrent Data"
@@ -143,7 +143,7 @@
         # Footer
         BoxLayout:
             size_hint_y: None
-            height: dp(35)
+            height: dp(50)
             pos_hint: {"x": 0, "y": 0}
 
             canvas.before:
@@ -156,7 +156,7 @@
             Label:
                 text: root.current_year
                 font_name: "Montserrat-Medium.ttf"
-                font_size: 18
+                font_size: 20
                 color: (1, 1, 1, 1)
                 halign: "center"
                 valign: "middle"
