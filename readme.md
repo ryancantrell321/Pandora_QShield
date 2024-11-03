@@ -157,6 +157,27 @@
     Planned features include password-protected secure backups and cloud storage support.
 </p>
 
+<h2>💿 Virus Scan Results</h2>
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <td style="text-align: center;">QShield_1920x1080.exe</td>
+        <td style="text-align: center;"><a href="https://virusscan.jotti.org/en-US/filescanjob/7sehuf5uhf" target="_blank">https://virusscan.jotti.org/en-US/filescanjob/7sehuf5uhf</a></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">QShield_1920x1080.zip</td>
+        <td style="text-align: center;"><a href="https://virusscan.jotti.org/en-US/filescanjob/quwkgxe18f" target="_blank">https://virusscan.jotti.org/en-US/filescanjob/quwkgxe18f</a></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">QShield_1366x768.exe</td>
+        <td style="text-align: center;"><a href="https://virusscan.jotti.org/en-US/filescanjob/lcxyfq3uwr" target="_blank">https://virusscan.jotti.org/en-US/filescanjob/lcxyfq3uwr</a></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">QShield_1366x768.zip</td>
+        <td style="text-align: center;"><a href="https://virusscan.jotti.org/en-US/filescanjob/zccmlnvnyh" target="_blank">https://virusscan.jotti.org/en-US/filescanjob/zccmlnvnyh</a></td>
+    </tr>
+</table>
+
+
 <h2>📞 Contact Us or Report a Bug</h2>
 <p style="text-align: justify; font-size: 16px;">
     <a href="mailto:pandoradynamics@gmail.com">pandoradynamics@gmail.com</a> <br>
