@@ -22,6 +22,8 @@
     <img src="https://img.shields.io/badge/python-3.12-darkgreen" alt="Python 3.12">
     <img src="https://img.shields.io/badge/kivy-2.3.0-purple" alt="Kivy 2.3.0">
     <img src="https://img.shields.io/badge/GPL-v3.0-orangered" alt="GPL v3.0">
+    <img alt="GitHub Downloads (all assets, all releases)" src="https://img.shields.io/github/downloads/ryancantrell321/Pandora_QShield/total">
+
 </div>
 
 <h2>⬇️ Downloads:</h2>
