@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pandora QShield README</title>
+    
 </head>
 <body style="font-family: Arial, sans-serif; margin: 0% 10% 0% 10%">
 
