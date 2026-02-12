@@ -1,4 +1,4 @@
-Kivy[Full]
+kivy[full]
 portalocker
 psutil
 requests

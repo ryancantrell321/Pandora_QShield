@@ -1,15 +1,20 @@
 """  
 Pandora QShield
-Version: 1.2
+Version: 1.3
 Author: Pandora Dynamics
-Release: November 2024
+Release: February 2026
 Copyright: RyanCantrell321, Pandora Dynamics
 License: Proprietary - All Rights Reserved
 """
+__version__ = "1.3"
+__author__ = "RyanCantrell321, Pandora Dynamics"
+__license__ = "Proprietary - All Rights Reserved"
+__copyright__ = "© 2024-2026 Pandora Dynamics, RyanCantrell321. All Rights Reserved"
+
 from kivy.config import Config
 Config.set('input', 'mouse', 'mouse,multitouch_on_demand')
-Config.set('graphics', 'minimum_width', '1000')
-Config.set('graphics', 'minimum_height', '820')
+Config.set('graphics', 'minimum_width', '850')
+Config.set('graphics', 'minimum_height', '770')
 
 from kivy.app import App
 from kivy.core.window import Window
@@ -34,15 +39,15 @@ lock_fd = acquire_lock()
 # Memory cleaner
 start_cleaner()
 
-try:
-    # Load emoji font
+try:    
+    # Load  fonts
     LB.register(name="EmojiFont", fn_regular="C:/Windows/Fonts/seguiemj.ttf")
-    
-    # Register custom fonts
     LB.register(name="Montserrat-Bold.ttf", fn_regular=get_asset_path("Montserrat-Bold.ttf"))
     LB.register(name="Montserrat-Medium.ttf", fn_regular=get_asset_path("Montserrat-Medium.ttf"))
     LB.register(name="Montserrat-Regular.ttf", fn_regular=get_asset_path("Montserrat-Regular.ttf"))
+    log_message("INFO", "Custom Fonts Registered")
     
+
     # Load .kv design files
     Builder.load_file(get_ui_path("main_screen.kv"))
     Builder.load_file(get_ui_path("backup_screen.kv"))

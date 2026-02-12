@@ -11,7 +11,7 @@ def memory_cleaner():
         while True:
             gc.collect()
             memory_info = psutil.virtual_memory()
-            print("INFO", f"Memory cleaned. Current usage: {memory_info.percent}%")
+            # print("INFO", f"Memory cleaned. Current usage: {memory_info.percent}%")
             time.sleep(5)
     except Exception as e:
         log_message("CRITICAL", f"Memory cleaner error: {e}")

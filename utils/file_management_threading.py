@@ -29,7 +29,7 @@ def backup_data(backup_location, backup_date, progress_callback):
         localappdata_path = os.path.join(os.getenv("LOCALAPPDATA"), "qBittorrent")
         appdata_path = os.path.join(os.getenv("APPDATA"), "qBittorrent")
 
-        backup_dir = os.path.join(backup_location, f"QShield_Qbt_Backup_{backup_date}")
+        backup_dir = os.path.join(backup_location, f"qSHIELD_Qbt_Backup_{backup_date}")
         os.makedirs(backup_dir, exist_ok=True)
 
         localappdata_backup = os.path.join(backup_dir, "localappdata")
@@ -38,7 +38,7 @@ def backup_data(backup_location, backup_date, progress_callback):
         shutil.copytree(localappdata_path, localappdata_backup)
         shutil.copytree(appdata_path, appdata_backup)
 
-        zip_path = os.path.join(backup_location, f"QShield_Qbt_Backup_{backup_date}.zip")
+        zip_path = os.path.join(backup_location, f"qSHIELD_Qbt_Backup_{backup_date}.zip")
         with zipfile.ZipFile(zip_path, "w") as backup_zip:
             total_files = sum([len(files) for _, _, files in os.walk(backup_dir)])
             processed_files = 0
@@ -77,8 +77,8 @@ def select_restore_location(update_location_callback):
 def restore_data(restore_file, restore_location, progress_callback):
     try:
 
-        if not os.path.basename(restore_file).startswith("QShield_Qbt_Backup"):
-            error("Invalid File", "Selected file is not a valid QShield backup file.")
+        if not os.path.basename(restore_file).startswith("qSHIELD_Qbt_Backup"):
+            error("Invalid File", "Selected file is not a valid qSHIELD backup file.")
             log_message("ERROR", "Attempted restore with an invalid file.")
             return
 

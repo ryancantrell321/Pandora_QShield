@@ -15,9 +15,9 @@ try:
             log_message("INFO", "Acquired lock on the instance")
             return lock_fd
         except portalocker.LockException:
-            error("Error", "Another instance of QShield is already running! Exiting.")
-            print("Another instance of QShield is already running! Exiting.")
-            log_message("ERROR", "Another instance of QShield is already running! Exiting.")
+            error("Error", "Another instance of qSHIELD is already running! Exiting.")
+            print("Another instance of qSHIELD is already running! Exiting.")
+            log_message("ERROR", "Another instance of qSHIELD is already running! Exiting.")
             sys.exit(1)
 
 

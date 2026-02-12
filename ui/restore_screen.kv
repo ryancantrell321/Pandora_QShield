@@ -72,7 +72,7 @@
                 BoxLayout:
                     orientation: "vertical"
                     size_hint_y: None
-                    height: dp(180)
+                    height: dp(120)
                     padding: dp(25)
                     spacing: dp(12)
                     canvas.before:
@@ -87,31 +87,33 @@
                         text: "📂  Restore Destination"
                         font_name: "EmojiFont"
                         font_size: sp(20)
-                        size_hint_y: 0.25
+                        size_hint_y: 0.4
                         color: 1, 1, 1, 1
                         halign: "left"
                         valign: "middle"
                         text_size: self.size
                     
-                    Label:
-                        text: "📁  %localappdata%/qBittorrent"
-                        font_name: "EmojiFont"
-                        font_size: sp(15)
-                        size_hint_y: 0.375
-                        color: 0.7, 0.7, 0.7, 1
-                        halign: "left"
-                        valign: "middle"
-                        text_size: self.size
-                    
-                    Label:
-                        text: "📁  %appdata%/qBittorrent"
-                        font_name: "EmojiFont"
-                        font_size: sp(15)
-                        size_hint_y: 0.375
-                        color: 0.7, 0.7, 0.7, 1
-                        halign: "left"
-                        valign: "middle"
-                        text_size: self.size
+                    BoxLayout:
+                        size_hint_y: 0.6
+                        spacing: dp(15)
+                        
+                        Label:
+                            text: "📁  %localappdata%/qBittorrent"
+                            font_name: "EmojiFont"
+                            font_size: sp(15)
+                            color: 0.7, 0.7, 0.7, 1
+                            halign: "left"
+                            valign: "middle"
+                            text_size: self.size
+                        
+                        Label:
+                            text: "📁  %appdata%/qBittorrent"
+                            font_name: "EmojiFont"
+                            font_size: sp(15)
+                            color: 0.7, 0.7, 0.7, 1
+                            halign: "left"
+                            valign: "middle"
+                            text_size: self.size
                 
                 BoxLayout:
                     orientation: "vertical"

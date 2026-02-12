@@ -20,7 +20,7 @@ class BackupScreen(Screen):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.current_year = f"© {get_current_year()} Pandora Dynamics. All Rights Reserved"
+        self.current_year = f"© 2024-{get_current_year()} Pandora Dynamics. All Rights Reserved"
         self.exit_system = exit_system
         self.open_logs = open_logs
         self.backup_guide = backup_guide

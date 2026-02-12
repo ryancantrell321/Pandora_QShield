@@ -1,0 +1,44 @@
+# UTF-8
+#
+# For more details about fixed file info:
+# See http://msdn.microsoft.com/en-us/library/ms646997.aspx
+
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    # filevers and prodvers should be always a tuple with four items: (1, 2, 3, 4)
+    # Set not needed items to zero 0.
+    filevers=(1, 3, 0, 0),
+    prodvers=(1, 3, 0, 0),
+    # Contains a bitmask that specifies the valid bits 'flags'r
+    mask=0x3f,
+    # Contains a bitmask that specifies the Boolean attributes of the file.
+    flags=0x0,
+    # The operating system for which this file was designed.
+    # 0x4 - NT and there is no need to change it.
+    OS=0x40004,
+    # The general type of file.
+    # 0x1 - the file is an application.
+    fileType=0x1,
+    # The function of the file.
+    # 0x0 - the function is not defined for this fileType
+    subtype=0x0,
+    # Creation date and time stamp.
+    date=(0, 0)
+    ),
+  kids=[
+    StringFileInfo(
+      [
+      StringTable(
+        u'040904B0',
+        [StringStruct(u'CompanyName', u'Pandora Dynamics'),
+        StringStruct(u'FileDescription', u'Pandora qSHIELD - qBittorrent Backup & Restore Tool'),
+        StringStruct(u'FileVersion', u'1.3.0.0'),
+        StringStruct(u'InternalName', u'Pandora_qSHIELD'),
+        StringStruct(u'LegalCopyright', u'\xa9 2024-2026 Pandora Dynamics, RyanCantrell321. All Rights Reserved'),
+        StringStruct(u'OriginalFilename', u'Pandora_qSHIELD.exe'),
+        StringStruct(u'ProductName', u'Pandora qSHIELD'),
+        StringStruct(u'ProductVersion', u'1.3.0.0')])
+      ]), 
+    VarFileInfo([VarStruct(u'Translation', [1033, 1200])])
+  ]
+)

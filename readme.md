@@ -13,14 +13,14 @@
 </div>
 
 <h1 style="text-align: center;">Pandora QShield</h1>
-<h2 style="text-align: center;">Version: 1.1</h2>
-<h3 style="color: green; text-align: center;">Release: November 2024</h3>
-<h3 style="color: orangered; text-align: center;">&copy; RyanCantrell321, Pandora Dynamics | UI Advisor: @Shad0wW0rri0r</h3>
+<h2 style="text-align: center;">Version: 1.2</h2>
+<h3 style="color: green; text-align: center;">Release: February 2026</h3>
+<h3 style="color: orangered; text-align: center;">&copy; RyanCantrell321, Pandora Dynamics</h3>
 <h3 style="text-align: center;">License: <a href="LICENSE.md">Proprietary - All Rights Reserved</a></h3>
 
 <div style="text-align: center;">
-    <img src="https://img.shields.io/badge/python-3.12-darkgreen" alt="Python 3.12">
-    <img src="https://img.shields.io/badge/kivy-2.3.0-purple" alt="Kivy 2.3.0">
+    <img src="https://img.shields.io/badge/python-3.13-darkgreen" alt="Python 3.12">
+    <img src="https://img.shields.io/badge/kivy-2.3.1-purple" alt="Kivy 2.3.0">
     <img src="https://img.shields.io/badge/License-Proprietary-red" alt="Proprietary License">
     <img alt="GitHub Downloads (all assets, all releases)" src="https://img.shields.io/github/downloads/ryancantrell321/Pandora_QShield/total">
 
@@ -28,51 +28,26 @@
 
 <h2>⬇️ Downloads:</h2>
 
-<table style="text-align: center; font-size: 16px; margin: auto; border: 1px solid black; border-collapse: collapse; width: 100%; max-width: 600px;">
-    <thead>
-        <tr>
-            <th style="border: 1px solid black; padding: 10px;">Resolution</th>
-            <th style="border: 1px solid black; padding: 10px;">Image</th>
-            <th style="border: 1px solid black; padding: 10px;">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="border: 1px solid black;">1920x1080</td>
-            <td style="border: 1px solid black;">
-                <a href="https://github.com/ryancantrell321/Pandora_QShield/releases/download/v1.1/QShield_1920x1080.zip">
+<a href="https://github.com/ryancantrell321/Pandora_QShield/releases/download/v1.2/Pandora_qSHIELD.exe">
                     <img src="https://i.ibb.co.com/jZ1y7ZL/68747470733a2f2f692e6962622e636f2f395a7a6e5678502f446f776e6c6f61642d427574746f6e2d5472616e7370617265.png" style="max-width: 100%; height: auto;" alt="Download">
                 </a>
-            </td>
-            <td style="border: 1px solid black;">If your screen resolution is 1920x1080, download this version of QShield</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid black;">1366x768</td>
-            <td style="border: 1px solid black;">
-                <a href="https://github.com/ryancantrell321/Pandora_QShield/releases/download/v1.1/QShield_1366x768.zip">
-                    <img src="https://i.ibb.co.com/jZ1y7ZL/68747470733a2f2f692e6962622e636f2f395a7a6e5678502f446f776e6c6f61642d427574746f6e2d5472616e7370617265.png" style="max-width: 100%; height: auto;" alt="Download">
-                </a>
-            </td>
-            <td style="border: 1px solid black;">If your screen resolution is 1366x768, download this version of QShield</td>
-        </tr>
-    </tbody>
-</table>
-
 
 <h2>About</h2>
 <p style="text-align: justify; font-size: 16px;">
-    Welcome to <strong>Pandora QShield</strong> – a user-friendly backup and restore solution designed to keep your qBittorrent settings secure!
-    With Pandora QShield, you can safely backup and restore your application settings with just a few clicks, ensuring that your preferences and configurations 
+    Welcome to <strong>Pandora qSHIELD</strong> – a user-friendly backup and restore solution designed to keep your qBittorrent settings secure!
+    With Pandora qSHIELD, you can safely backup and restore your application settings with just a few clicks, ensuring that your preferences and configurations 
     are preserved no matter what; reinstalling Windows, migrating Windows versions, or reinstalling the qBittorrent software from scratch!
 </p>
 
 <h2>🎯 Key Features</h2>
 <ul style="text-align: justify; font-size: 16px;">
-    <li><strong>Portability:</strong> No installation required. Just launch QShield_{resolution}.exe with admin privileges.</li>
+    <li><strong>Portability:</strong> No installation required. Just launch Pandora_qSHIELD.exe with admin privileges.</li>
+    <li><strong>Updates:</strong> Built-in update checker downloads new versions from GitHub releases.</li>
+    <li><strong>Modern UI:</strong> Card-based interface with responsive design</li>
     <li><strong>Secure Backup & Restore:</strong> Easily save and restore qBittorrent settings to a location of your choice.</li>
-    <li><strong>Enhanced Stability & Interactivity:</strong> Quick, stable backup and restore with a user-friendly interface.</li>
+    <li><strong>Enhanced Stability:</strong> Quick, stable backup and restore with a user-friendly interface.</li>
     <li><strong>Performance Optimization:</strong> Multi-instance defense mechanism and memory efficiency algorithm.</li>
-    <li><strong>Precise Event Logs:</strong> Contains a logging system that records all actions for easy debugging.</li>
+    <li><strong>Precise Event Logs:</strong> Centralized logging system in Documents/qSHIELD Logs folder.</li>
 </ul>
 
 <h2>📥 Minimum System Requirements</h2>
@@ -100,19 +75,12 @@
 </div>
 
 
-
-<div>
-        <p style="text-align: justify; font-size: 16px;">
-        Because of the design language used, resizing of the software results in the GUI elements getting messy and disordered. We plan to fix this in a future update with another design language.</p>
-</div>
     
 <h2>📚 How to Install</h2>
-<p style="color: crimson; font-size: 16px;"><strong>QSHIELD IS PORTABLE. NO INSTALLATION NEEDED. FOLLOW THESE STEPS:</strong></p>
+<p style="color: crimson; font-size: 16px;"><strong>PANDORA qSHIELD IS PORTABLE. NO INSTALLATION NEEDED. FOLLOW THESE STEPS:</strong></p>
 <ol style="text-align: justify; font-size: 16px;">
-    <li>Download the version that matches your resolution.</li>
-    <li>Extract the downloaded .zip file.</li>
-    <li>Open the folder named QShield_1920x1080 or QShield_1366x768.</li>
-    <li>Double-click QShield_1920x1080.exe or QShield_1366x768.exe and grant admin privileges.</li>
+    <li>Download the latest release from GitHub.</li>
+    <li>Run Pandora_qSHIELD.exe with administrator privileges.</li>
 </ol>
 
 <h2>💻 Usage</h2>
@@ -130,28 +98,28 @@
 <h2>📷 Screenshots</h2>
 
 <div style="text-align: center;">
-    <img src="https://i.ibb.co.com/wK2Y8d9/Screenshot-1.png" alt="Screenshot 1" width="500px">
-    <img src="https://i.ibb.co.com/vjFpmd4/Screenshot-2.png" alt="Screenshot 2" width="500px">
-    <img src="https://i.ibb.co.com/WczwVkS/Screenshot-3.png" alt="Screenshot 3" width="500px">
-    <img src="https://i.ibb.co.com/zxKnrnL/Screenshot-4.png" alt="Screenshot 4" width="500px">
-    <img src="https://i.ibb.co.com/Yb1Zzyc/Screenshot-5.png" alt="Screenshot 5" width="500px">
-    <img src="https://i.ibb.co.com/y6gHcYT/Screenshot-6.png" alt="Screenshot 6" width="500px">
-    <img src="https://i.ibb.co.com/th0Xnc0/Screenshot-7.png" alt="Screenshot 7" width="500px">
-    <img src="https://i.ibb.co.com/mTjd10K/Screenshot-8.png" alt="Screenshot 8" width="500px">
-    <img src="https://i.ibb.co.com/yhH7czy/Screenshot-9.png" alt="Screenshot 9" width="500px">
-    <img src="https://i.ibb.co.com/1TJDq5Q/Screenshot-10.png" alt="Screenshot 10" width="500px">
-    <img src="https://i.ibb.co.com/grqr3x7/Screenshot-11.png" alt="Screenshot 11" width="500px">
-    <img src="https://i.ibb.co.com/c2JLPg9/Screenshot-12.png" alt="Screenshot 12" width="500px">
-    <img src="https://i.ibb.co.com/NNfpVy4/Screenshot-13.png" alt="Screenshot 13" width="500px">
-    <img src="https://i.ibb.co.com/Q6xKDZt/Screenshot-14.png" alt="Screenshot 14" width="500px">
-    <img src="https://i.ibb.co.com/BLxhyjz/Screenshot-15.png" alt="Screenshot 15" width="500px">
-    <img src="https://i.ibb.co.com/hyChhHf/Screenshot-16.png" alt="Screenshot 16" width="500px">
+    <img src="https://i.postimg.cc/ncKthDjN/screenshot-2.png" alt="Screenshot 1" width="500px">
+    <img src="https://i.postimg.cc/MGCsB9g4/screenshot-3.png" alt="Screenshot 2" width="500px">
+    <img src="https://i.postimg.cc/mkby3Jj3/screenshot-4.png" alt="Screenshot 3" width="500px">
+    <img src="https://i.postimg.cc/fLM91Xdf/screenshot-5.png" alt="Screenshot 4" width="500px">
+    <img src="https://i.postimg.cc/3RwwgZpC/screenshot-7.png" alt="Screenshot 5" width="500px">
+    <img src="https://i.postimg.cc/L512TQsD/screenshot-8.png" alt="Screenshot 6" width="500px">
+    <img src="https://i.postimg.cc/6Qp70wxq/screenshot-9.png" alt="Screenshot 7" width="500px">
+    <img src="https://i.postimg.cc/dtRLcDqG/screenshot-10.png" alt="Screenshot 8" width="500px">
+    <img src="https://i.postimg.cc/66nQCT4M/screenshot-11.png" alt="Screenshot 9" width="500px">
+    <img src="https://i.postimg.cc/FsGNxSr6/screenshot-12.png" alt="Screenshot 10" width="500px">
+    <img src="https://i.postimg.cc/MHqJ76hX/screenshot-13.png" alt="Screenshot 11" width="500px">
+    <img src="https://i.postimg.cc/PqY7SGbn/screenshot-14.png" alt="Screenshot 12" width="500px">
+    <img src="https://i.postimg.cc/KzstLjK5/screenshot-15.png" alt="Screenshot 13" width="500px">
+    <img src="https://i.postimg.cc/BZrhtSr0/screenshot-16.png" alt="Screenshot 14" width="500px">
+    <img src="https://i.postimg.cc/66vcssyn/screenshot-17.png" alt="Screenshot 15" width="500px">
+    <img src="https://i.postimg.cc/kgzDPHVn/screenshot-18.png" alt="Screenshot 16" width="500px">
 </div>
 
     
 <h2>📑 License</h2>
 <p style="text-align: justify; font-size: 16px;">
-    Pandora QShield is proprietary software. All rights reserved. Modification, distribution, and reverse engineering are strictly prohibited. See <a href="LICENSE.md">LICENSE.md</a> for full terms.
+    Pandora qSHIELD is proprietary software. All rights reserved. Modification, distribution, and reverse engineering are strictly prohibited. See <a href="LICENSE.md">LICENSE.md</a> for full terms.
 </p>
 
 <h2>🌐 Future Enhancements</h2>
@@ -160,24 +128,7 @@
 </p>
 
 <h2>💿 Virus Scan Results</h2>
-<table border="1" cellpadding="5" cellspacing="0">
-    <tr>
-        <td style="text-align: center;">QShield_1920x1080.exe</td>
-        <td style="text-align: center;"><a href="https://virusscan.jotti.org/en-US/filescanjob/7sehuf5uhf" target="_blank">https://virusscan.jotti.org/en-US/filescanjob/7sehuf5uhf</a></td>
-    </tr>
-    <tr>
-        <td style="text-align: center;">QShield_1920x1080.zip</td>
-        <td style="text-align: center;"><a href="https://virusscan.jotti.org/en-US/filescanjob/quwkgxe18f" target="_blank">https://virusscan.jotti.org/en-US/filescanjob/quwkgxe18f</a></td>
-    </tr>
-    <tr>
-        <td style="text-align: center;">QShield_1366x768.exe</td>
-        <td style="text-align: center;"><a href="https://virusscan.jotti.org/en-US/filescanjob/lcxyfq3uwr" target="_blank">https://virusscan.jotti.org/en-US/filescanjob/lcxyfq3uwr</a></td>
-    </tr>
-    <tr>
-        <td style="text-align: center;">QShield_1366x768.zip</td>
-        <td style="text-align: center;"><a href="https://virusscan.jotti.org/en-US/filescanjob/zccmlnvnyh" target="_blank">https://virusscan.jotti.org/en-US/filescanjob/zccmlnvnyh</a></td>
-    </tr>
-</table>
+<p style="text-align: justify; font-size: 16px;">Virus scan results will be updated for v1.2 release.</p>
 
 
 <h2>📞 Contact Us or Report a Bug</h2>

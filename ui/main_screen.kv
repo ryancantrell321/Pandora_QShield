@@ -10,7 +10,7 @@
 
         BoxLayout:
             size_hint_y: 0.15
-            padding: dp(30), dp(20)
+            padding: dp(50), dp(20)
             canvas.before:
                 Color:
                     rgba: 0.02, 0.05, 0.1, 1
@@ -18,13 +18,8 @@
                     pos: self.pos
                     size: self.size
             
-            Image:
-                source: "assets/Logo.png"
-                keep_ratio: True
-                size_hint_x: 0.12
-            
             Label:
-                text: "Pandora QShield"
+                text: "Pandora qSHIELD"
                 font_name: "Montserrat-Bold.ttf"
                 font_size: sp(32)
                 color: 1, 1, 1, 1
@@ -162,7 +157,7 @@
                         color: 1, 1, 1, 1
                     
                     Label:
-                        text: "Learn how to use Pandora QShield"
+                        text: "Learn how to use Pandora qSHIELD"
                         font_name: "Montserrat-Medium.ttf"
                         font_size: sp(15)
                         size_hint_y: 0.22
@@ -219,19 +214,6 @@
                         background_color: 0.2, 0.3, 0.4, 1
                         background_normal: ""
                         on_release: app.root.current = "settings"
-            
-            BoxLayout:
-                size_hint_y: None
-                height: dp(60)
-                padding: [dp(50), 0]
-                
-                Button:
-                    text: "❌  Exit Application"
-                    font_name: "EmojiFont"
-                    font_size: sp(16)
-                    background_color: 0.6, 0.1, 0.1, 1
-                    background_normal: ""
-                    on_release: root.exit_system()
         
         BoxLayout:
             size_hint_y: 0.06

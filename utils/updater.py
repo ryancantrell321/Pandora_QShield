@@ -9,7 +9,7 @@ from kivy.clock import mainthread
 
 # Update configuration
 GITHUB_REPO = "ryancantrell321/Pandora_QShield"  
-CURRENT_VERSION = "1.2"  # Must match version in settingsscreen.py
+CURRENT_VERSION = "1.3"  # Must match version in settingsscreen.py
 UPDATE_CHECK_URL = f"https://api.github.com/repos/{GITHUB_REPO}/releases/latest"
 
 
@@ -169,7 +169,7 @@ def check_for_updates(show_no_update=True):
             else:
                 log_message("INFO", "No updates available")
                 if show_no_update:
-                    information("No Updates", f"You are running the latest version ({CURRENT_VERSION})")
+                    information("No Updates", f"You are running the latest version (v{CURRENT_VERSION})")
         else:
             log_message("WARNING", "Update check returned no data")
             if show_no_update:
