@@ -6,14 +6,14 @@ from datetime import datetime
 try:
     # Get Windows Documents folder
     documents_folder = os.path.join(os.path.expanduser("~"), "Documents")
-    log_directory = os.path.join(documents_folder, "QShield Logs")
+    log_directory = os.path.join(documents_folder, "qSHIELD Logs")
     os.makedirs(log_directory, exist_ok=True)
 
     # Log file path
     LOG_FILE = os.path.join(log_directory, "events.log")
 
     # Setting up the logger
-    logger = logging.getLogger("QShield Logger")
+    logger = logging.getLogger("qSHIELD Logger")
     logger.setLevel(logging.DEBUG)
     # Create a rotating file handler that logs to a file with max size of 1MB and keeps 3 backup files
     file_handler = RotatingFileHandler(LOG_FILE, maxBytes=1*1024*1024, backupCount=3)
