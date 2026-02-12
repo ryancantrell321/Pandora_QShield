@@ -13,7 +13,7 @@
 </div>
 
 <h1 style="text-align: center;">Pandora QShield</h1>
-<h2 style="text-align: center;">Version: 1.2</h2>
+<h2 style="text-align: center;">Version: 1.3</h2>
 <h3 style="color: green; text-align: center;">Release: February 2026</h3>
 <h3 style="color: orangered; text-align: center;">&copy; RyanCantrell321, Pandora Dynamics</h3>
 <h3 style="text-align: center;">License: <a href="LICENSE.md">Proprietary - All Rights Reserved</a></h3>
@@ -128,7 +128,9 @@
 </p>
 
 <h2>💿 Virus Scan Results</h2>
-<p style="text-align: justify; font-size: 16px;">Virus scan results will be updated for v1.2 release.</p>
+<p style="text-align: justify; font-size: 16px;"><a href="https://virusscan.jotti.org/en-GB/filescanjob/8c96lhoo59">Virus Scan Jotti Results</a></p>
+
+<h3>Windows Defender and Smartscreen will flag this program as Potentially Unwanted App. Exclude it.</h3>
 
 
 <h2>📞 Contact Us or Report a Bug</h2>
