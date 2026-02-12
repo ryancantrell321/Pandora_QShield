@@ -1,0 +1,190 @@
+<SettingsScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        canvas.before:
+            Color:
+                rgba: 0.05, 0.08, 0.12, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        BoxLayout:
+            size_hint_y: 0.12
+            padding: dp(30), dp(20)
+            spacing: dp(20)
+            canvas.before:
+                Color:
+                    rgba: 0.02, 0.05, 0.1, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            
+            Button:
+                text: "← Back"
+                font_name: "Montserrat-Bold.ttf"
+                font_size: sp(16)
+                size_hint_x: 0.1
+                background_color: 0.2, 0.3, 0.4, 1
+                background_normal: ""
+                on_release: app.root.current = "main"
+            
+            Label:
+                text: "⚙️  More Options"
+                font_name: "EmojiFont"
+                font_size: sp(28)
+                color: 1, 1, 1, 1
+                halign: "left"
+                valign: "middle"
+                text_size: self.size
+        
+        BoxLayout:
+            orientation: "vertical"
+            padding: dp(50), dp(30)
+            spacing: dp(25)
+            
+            GridLayout:
+                cols: 2
+                spacing: dp(30)
+                
+                BoxLayout:
+                    orientation: "vertical"
+                    padding: dp(30)
+                    spacing: dp(15)
+                    canvas.before:
+                        Color:
+                            rgba: 0.08, 0.12, 0.18, 1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [15,]
+                    
+                    Label:
+                        text: "🔄"
+                        font_name: "EmojiFont"
+                        font_size: sp(56)
+                        size_hint_y: 0.3
+                    
+                    Label:
+                        text: "Software Updates"
+                        font_name: "Montserrat-Bold.ttf"
+                        font_size: sp(22)
+                        size_hint_y: 0.15
+                        color: 1, 1, 1, 1
+                    
+                    Label:
+                        text: f"Current Version: {root.current_version}"
+                        font_name: "Montserrat-Medium.ttf"
+                        font_size: sp(15)
+                        size_hint_y: 0.25
+                        color: 0.7, 0.7, 0.7, 1
+                    
+                    Button:
+                        text: "Check for Updates"
+                        font_name: "Montserrat-Bold.ttf"
+                        font_size: sp(16)
+                        size_hint_y: None
+                        height: dp(50)
+                        background_color: 0.051, 0.5, 0, 1
+                        background_normal: ""
+                        on_release: root.check_for_updates()
+                
+                BoxLayout:
+                    orientation: "vertical"
+                    padding: dp(30)
+                    spacing: dp(15)
+                    canvas.before:
+                        Color:
+                            rgba: 0.08, 0.12, 0.18, 1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [15,]
+                    
+                    Label:
+                        text: "📄"
+                        font_name: "EmojiFont"
+                        font_size: sp(56)
+                        size_hint_y: 0.3
+                    
+                    Label:
+                        text: "View Logs"
+                        font_name: "Montserrat-Bold.ttf"
+                        font_size: sp(22)
+                        size_hint_y: 0.15
+                        color: 1, 1, 1, 1
+                    
+                    Label:
+                        text: "View system logs and operation history"
+                        font_name: "Montserrat-Medium.ttf"
+                        font_size: sp(15)
+                        size_hint_y: 0.25
+                        color: 0.7, 0.7, 0.7, 1
+                    
+                    Button:
+                        text: "Open Logs"
+                        font_name: "Montserrat-Bold.ttf"
+                        font_size: sp(16)
+                        size_hint_y: None
+                        height: dp(50)
+                        background_color: 0.2, 0.3, 0.4, 1
+                        background_normal: ""
+                        on_release: root.open_logs()
+                
+                BoxLayout:
+                    orientation: "vertical"
+                    padding: dp(30)
+                    spacing: dp(15)
+                    canvas.before:
+                        Color:
+                            rgba: 0.08, 0.12, 0.18, 1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [15,]
+                    
+                    Label:
+                        text: "ℹ️"
+                        font_name: "EmojiFont"
+                        font_size: sp(56)
+                        size_hint_y: 0.3
+                    
+                    Label:
+                        text: "About"
+                        font_name: "Montserrat-Bold.ttf"
+                        font_size: sp(22)
+                        size_hint_y: 0.15
+                        color: 1, 1, 1, 1
+                    
+                    Label:
+                        text: "About Pandora QShield and developers"
+                        font_name: "Montserrat-Medium.ttf"
+                        font_size: sp(15)
+                        size_hint_y: 0.25
+                        color: 0.7, 0.7, 0.7, 1
+                    
+                    Button:
+                        text: "View About"
+                        font_name: "Montserrat-Bold.ttf"
+                        font_size: sp(16)
+                        size_hint_y: None
+                        height: dp(50)
+                        background_color: 0.2, 0.3, 0.4, 1
+                        background_normal: ""
+                        on_release: root.about()
+                
+                Widget:
+        
+        BoxLayout:
+            size_hint_y: 0.06
+            canvas.before:
+                Color:
+                    rgba: 0.02, 0.05, 0.1, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            
+            Label:
+                text: root.current_year
+                font_name: "Montserrat-Medium.ttf"
+                font_size: sp(13)
+                color: 0.6, 0.6, 0.6, 1

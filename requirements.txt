@@ -1,0 +1,4 @@
+Kivy[Full]
+portalocker
+psutil
+requests

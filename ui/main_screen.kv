@@ -1,0 +1,249 @@
+<MainScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        canvas.before:
+            Color:
+                rgba: 0.05, 0.08, 0.12, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        BoxLayout:
+            size_hint_y: 0.15
+            padding: dp(30), dp(20)
+            canvas.before:
+                Color:
+                    rgba: 0.02, 0.05, 0.1, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            
+            Image:
+                source: "assets/Logo.png"
+                keep_ratio: True
+                size_hint_x: 0.12
+            
+            Label:
+                text: "Pandora QShield"
+                font_name: "Montserrat-Bold.ttf"
+                font_size: sp(32)
+                color: 1, 1, 1, 1
+                halign: "left"
+                valign: "middle"
+                text_size: self.size
+        
+        BoxLayout:
+            orientation: "vertical"
+            padding: dp(50), dp(30)
+            spacing: dp(25)
+            
+            Label:
+                text: "What would you like to do?"
+                font_name: "Montserrat-Bold.ttf"
+                font_size: sp(22)
+                size_hint_y: 0.08
+                color: 0.9, 0.9, 0.9, 1
+                halign: "left"
+                valign: "middle"
+                text_size: self.size
+            
+            GridLayout:
+                cols: 2
+                spacing: dp(30)
+                size_hint_y: 0.8
+                
+                BoxLayout:
+                    orientation: "vertical"
+                    padding: dp(35)
+                    spacing: dp(20)
+                    canvas.before:
+                        Color:
+                            rgba: 0.08, 0.12, 0.18, 1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [20,]
+                    
+                    Label:
+                        text: "💾"
+                        font_name: "EmojiFont"
+                        font_size: sp(48)
+                        size_hint_y: 0.35
+                    
+                    Label:
+                        text: "Backup Data"
+                        font_name: "Montserrat-Bold.ttf"
+                        font_size: sp(26)
+                        size_hint_y: 0.18
+                        color: 1, 1, 1, 1
+                    
+                    Label:
+                        text: "Save your qBittorrent settings securely"
+                        font_name: "Montserrat-Medium.ttf"
+                        font_size: sp(15)
+                        size_hint_y: 0.22
+                        color: 0.7, 0.7, 0.7, 1
+                    
+                    Button:
+                        text: "Start Backup"
+                        font_name: "Montserrat-Bold.ttf"
+                        font_size: sp(16)
+                        size_hint_y: None
+                        height: dp(50)
+                        background_color: 0.051, 0.5, 0, 1
+                        background_normal: ""
+                        on_release: app.root.current = "backup"
+                
+                BoxLayout:
+                    orientation: "vertical"
+                    padding: dp(35)
+                    spacing: dp(20)
+                    canvas.before:
+                        Color:
+                            rgba: 0.08, 0.12, 0.18, 1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [20,]
+                    
+                    Label:
+                        text: "♻️"
+                        font_name: "EmojiFont"
+                        font_size: sp(48)
+                        size_hint_y: 0.35
+                    
+                    Label:
+                        text: "Restore Data"
+                        font_name: "Montserrat-Bold.ttf"
+                        font_size: sp(26)
+                        size_hint_y: 0.18
+                        color: 1, 1, 1, 1
+                    
+                    Label:
+                        text: "Restore your qBittorrent settings from backup"
+                        font_name: "Montserrat-Medium.ttf"
+                        font_size: sp(15)
+                        size_hint_y: 0.22
+                        color: 0.7, 0.7, 0.7, 1
+                    
+                    Button:
+                        text: "Start Restore"
+                        font_name: "Montserrat-Bold.ttf"
+                        font_size: sp(16)
+                        size_hint_y: None
+                        height: dp(50)
+                        background_color: 0.051, 0.5, 0, 1
+                        background_normal: ""
+                        on_release: app.root.current = "restore"
+                
+                BoxLayout:
+                    orientation: "vertical"
+                    padding: dp(35)
+                    spacing: dp(20)
+                    canvas.before:
+                        Color:
+                            rgba: 0.08, 0.12, 0.18, 1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [20,]
+                    
+                    Label:
+                        text: "📖"
+                        font_name: "EmojiFont"
+                        font_size: sp(48)
+                        size_hint_y: 0.35
+                    
+                    Label:
+                        text: "User Guide"
+                        font_name: "Montserrat-Bold.ttf"
+                        font_size: sp(26)
+                        size_hint_y: 0.18
+                        color: 1, 1, 1, 1
+                    
+                    Label:
+                        text: "Learn how to use Pandora QShield"
+                        font_name: "Montserrat-Medium.ttf"
+                        font_size: sp(15)
+                        size_hint_y: 0.22
+                        color: 0.7, 0.7, 0.7, 1
+                    
+                    Button:
+                        text: "View Guide"
+                        font_name: "Montserrat-Bold.ttf"
+                        font_size: sp(16)
+                        size_hint_y: None
+                        height: dp(50)
+                        background_color: 0.2, 0.3, 0.4, 1
+                        background_normal: ""
+                        on_release: root.guide()
+                
+                BoxLayout:
+                    orientation: "vertical"
+                    padding: dp(35)
+                    spacing: dp(20)
+                    canvas.before:
+                        Color:
+                            rgba: 0.08, 0.12, 0.18, 1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [20,]
+                    
+                    Label:
+                        text: "⚙️"
+                        font_name: "EmojiFont"
+                        font_size: sp(48)
+                        size_hint_y: 0.35
+                    
+                    Label:
+                        text: "More Options"
+                        font_name: "Montserrat-Bold.ttf"
+                        font_size: sp(26)
+                        size_hint_y: 0.18
+                        color: 1, 1, 1, 1
+                    
+                    Label:
+                        text: "Logs, About and Software Updates"
+                        font_name: "Montserrat-Medium.ttf"
+                        font_size: sp(15)
+                        size_hint_y: 0.22
+                        color: 0.7, 0.7, 0.7, 1
+                    
+                    Button:
+                        text: "Open Options"
+                        font_name: "Montserrat-Bold.ttf"
+                        font_size: sp(16)
+                        size_hint_y: None
+                        height: dp(50)
+                        background_color: 0.2, 0.3, 0.4, 1
+                        background_normal: ""
+                        on_release: app.root.current = "settings"
+            
+            BoxLayout:
+                size_hint_y: None
+                height: dp(60)
+                padding: [dp(50), 0]
+                
+                Button:
+                    text: "❌  Exit Application"
+                    font_name: "EmojiFont"
+                    font_size: sp(16)
+                    background_color: 0.6, 0.1, 0.1, 1
+                    background_normal: ""
+                    on_release: root.exit_system()
+        
+        BoxLayout:
+            size_hint_y: 0.06
+            canvas.before:
+                Color:
+                    rgba: 0.02, 0.05, 0.1, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            
+            Label:
+                text: root.current_year
+                font_name: "Montserrat-Medium.ttf"
+                font_size: sp(13)
+                color: 0.6, 0.6, 0.6, 1

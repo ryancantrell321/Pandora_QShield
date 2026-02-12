@@ -16,12 +16,12 @@
 <h2 style="text-align: center;">Version: 1.1</h2>
 <h3 style="color: green; text-align: center;">Release: November 2024</h3>
 <h3 style="color: orangered; text-align: center;">&copy; RyanCantrell321, Pandora Dynamics | UI Advisor: @Shad0wW0rri0r</h3>
-<h3 style="text-align: center;">License: <a href="https://www.gnu.org/licenses/gpl-3.0.html#license-text">GNU General Public License (GPL) v3.0</a></h3>
+<h3 style="text-align: center;">License: <a href="LICENSE.md">Proprietary - All Rights Reserved</a></h3>
 
 <div style="text-align: center;">
     <img src="https://img.shields.io/badge/python-3.12-darkgreen" alt="Python 3.12">
     <img src="https://img.shields.io/badge/kivy-2.3.0-purple" alt="Kivy 2.3.0">
-    <img src="https://img.shields.io/badge/GPL-v3.0-orangered" alt="GPL v3.0">
+    <img src="https://img.shields.io/badge/License-Proprietary-red" alt="Proprietary License">
     <img alt="GitHub Downloads (all assets, all releases)" src="https://img.shields.io/github/downloads/ryancantrell321/Pandora_QShield/total">
 
 </div>
@@ -151,7 +151,7 @@
     
 <h2>📑 License</h2>
 <p style="text-align: justify; font-size: 16px;">
-    Pandora QShield is licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.html#license-text">GNU General Public License (GPL) v3.0</a>.
+    Pandora QShield is proprietary software. All rights reserved. Modification, distribution, and reverse engineering are strictly prohibited. See <a href="LICENSE.md">LICENSE.md</a> for full terms.
 </p>
 
 <h2>🌐 Future Enhancements</h2>

@@ -1,0 +1,238 @@
+<RestoreScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        canvas.before:
+            Color:
+                rgba: 0.05, 0.08, 0.12, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        BoxLayout:
+            size_hint_y: 0.12
+            padding: dp(30), dp(20)
+            spacing: dp(20)
+            canvas.before:
+                Color:
+                    rgba: 0.02, 0.05, 0.1, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            
+            Button:
+                text: "← Back"
+                font_name: "Montserrat-Bold.ttf"
+                font_size: sp(16)
+                size_hint_x: 0.1
+                background_color: 0.2, 0.3, 0.4, 1
+                background_normal: ""
+                on_release: app.root.current = "main"
+            
+            Label:
+                text: "♻️  Restore qBittorrent Data"
+                font_name: "EmojiFont"
+                font_size: sp(28)
+                color: 1, 1, 1, 1
+                halign: "left"
+                valign: "middle"
+                text_size: self.size
+        
+        ScrollView:
+            do_scroll_x: False
+            
+            BoxLayout:
+                orientation: "vertical"
+                padding: dp(40)
+                spacing: dp(20)
+                size_hint_y: None
+                height: self.minimum_height
+                
+                BoxLayout:
+                    orientation: "vertical"
+                    size_hint_y: None
+                    height: dp(70)
+                    padding: dp(20)
+                    canvas.before:
+                        Color:
+                            rgba: 0.8, 0.5, 0, 0.3
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [15,]
+                    
+                    Label:
+                        text: "⚠️  IMPORTANT: Make sure qBittorrent is NOT running!"
+                        font_name: "EmojiFont"
+                        font_size: sp(15)
+                        color: 1, 0.9, 0, 1
+                        halign: "center"
+                        valign: "middle"
+                        text_size: self.size
+                
+                BoxLayout:
+                    orientation: "vertical"
+                    size_hint_y: None
+                    height: dp(180)
+                    padding: dp(25)
+                    spacing: dp(12)
+                    canvas.before:
+                        Color:
+                            rgba: 0.08, 0.12, 0.18, 1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [15,]
+                    
+                    Label:
+                        text: "📂  Restore Destination"
+                        font_name: "EmojiFont"
+                        font_size: sp(20)
+                        size_hint_y: 0.25
+                        color: 1, 1, 1, 1
+                        halign: "left"
+                        valign: "middle"
+                        text_size: self.size
+                    
+                    Label:
+                        text: "📁  %localappdata%/qBittorrent"
+                        font_name: "EmojiFont"
+                        font_size: sp(15)
+                        size_hint_y: 0.375
+                        color: 0.7, 0.7, 0.7, 1
+                        halign: "left"
+                        valign: "middle"
+                        text_size: self.size
+                    
+                    Label:
+                        text: "📁  %appdata%/qBittorrent"
+                        font_name: "EmojiFont"
+                        font_size: sp(15)
+                        size_hint_y: 0.375
+                        color: 0.7, 0.7, 0.7, 1
+                        halign: "left"
+                        valign: "middle"
+                        text_size: self.size
+                
+                BoxLayout:
+                    orientation: "vertical"
+                    size_hint_y: None
+                    height: dp(160)
+                    padding: dp(25)
+                    spacing: dp(12)
+                    canvas.before:
+                        Color:
+                            rgba: 0.08, 0.12, 0.18, 1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [15,]
+                    
+                    Label:
+                        text: "📦  Restoration File"
+                        font_name: "EmojiFont"
+                        font_size: sp(20)
+                        size_hint_y: 0.25
+                        color: 1, 1, 1, 1
+                        halign: "left"
+                        valign: "middle"
+                        text_size: self.size
+                    
+                    Label:
+                        text: root.selected_restore_file if root.selected_restore_file else "Not selected"
+                        font_name: "Montserrat-Medium.ttf"
+                        font_size: sp(14)
+                        size_hint_y: 0.4
+                        color: 0.7, 0.7, 0.7, 1
+                        halign: "left"
+                        valign: "middle"
+                        text_size: self.size
+                    
+                    Button:
+                        text: "📁  Select File"
+                        font_name: "EmojiFont"
+                        font_size: sp(15)
+                        size_hint: None, None
+                        width: dp(200)
+                        height: dp(45)
+                        background_color: 0.051, 0.5, 0, 1
+                        background_normal: ""
+                        on_release: root.select_restore_location()
+                
+                BoxLayout:
+                    orientation: "vertical"
+                    size_hint_y: None
+                    height: dp(120)
+                    padding: dp(25)
+                    spacing: dp(12)
+                    canvas.before:
+                        Color:
+                            rgba: 0.08, 0.12, 0.18, 1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [15,]
+                    
+                    Label:
+                        text: "📊  Progress"
+                        font_name: "EmojiFont"
+                        font_size: sp(20)
+                        size_hint_y: 0.45
+                        color: 1, 1, 1, 1
+                        halign: "left"
+                        valign: "middle"
+                        text_size: self.size
+                    
+                    BoxLayout:
+                        size_hint_y: 0.65
+                        spacing: dp(15)
+                        
+                        ProgressBar:
+                            max: 100
+                            value: root.progress
+                            size_hint_y: 0.7
+                            pos_hint: {"center_y": 0.5}
+                        
+                        Label:
+                            text: f"{int(root.progress)}%"
+                            size_hint_x: 0.15
+                            font_name: "Montserrat-Bold.ttf"
+                            font_size: sp(18)
+                            color: 1, 1, 1, 1
+                
+                BoxLayout:
+                    size_hint_y: None
+                    height: dp(60)
+                    spacing: dp(15)
+                    
+                    Button:
+                        text: "♻️  Start Restore"
+                        font_name: "EmojiFont"
+                        font_size: sp(18)
+                        background_color: 0.051, 0.5, 0, 1
+                        background_normal: ""
+                        disabled: root.restore_in_progress
+                        on_release: root.restore_data()
+                    
+                    Button:
+                        text: "📖  Guide"
+                        font_name: "EmojiFont"
+                        font_size: sp(18)
+                        size_hint_x: 0.25
+                        background_color: 0.2, 0.3, 0.4, 1
+                        background_normal: ""
+                        on_release: root.restore_guide()
+        
+        BoxLayout:
+            size_hint_y: 0.06
+            canvas.before:
+                Color:
+                    rgba: 0.02, 0.05, 0.1, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            
+            Label:
+                text: root.current_year
+                font_name: "Montserrat-Medium.ttf"
+                font_size: sp(13)
+                color: 0.6, 0.6, 0.6, 1
