@@ -9,7 +9,7 @@ from kivy.clock import mainthread
 
 # Update configuration
 GITHUB_REPO = "ryancantrell321/Pandora_QShield"  
-CURRENT_VERSION = "1.3"  # Must match version in settingsscreen.py
+CURRENT_VERSION = "1.4"  # Must match version in settingsscreen.py
 UPDATE_CHECK_URL = f"https://api.github.com/repos/{GITHUB_REPO}/releases/latest"
 
 
@@ -66,7 +66,7 @@ def download_update(download_url, progress_callback=None):
     """Download update file"""
     try:
         downloads_folder = os.path.join(os.path.expanduser("~"), "Downloads")
-        filename = f"Pandora_qSHIELD_Update.exe"
+        filename = f"Pandora_qSHIELD_v{CURRENT_VERSION}.exe"
         filepath = os.path.join(downloads_folder, filename)
         
         log_message("INFO", f"Downloading update from: {download_url}")
@@ -103,7 +103,7 @@ def show_update_prompt(latest_version, download_url, release_notes):
     message = f"A new version ({latest_version}) is available!\n\n"
     message += f"Current version: {CURRENT_VERSION}\n\n"
     if release_notes:
-        message += f"Release Notes:\n{release_notes[:200]}...\n\n"
+        message += f"Release Notes:\n{release_notes[:50]}...\n\n"
     message += "Would you like to download the update now?"
     
     result = messagebox.askyesno("Update Available", message)

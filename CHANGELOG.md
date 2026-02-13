@@ -2,6 +2,23 @@
 
 All notable changes to Pandora QShield will be documented in this file.
 
+## [1.4] - 13 February 2026
+
+### ✨ New Features
+- **Automatic Update Check**: App now checks for updates automatically on startup (silent, only notifies if update available)
+
+### 🐛 Bug Fixes
+- **Fixed Backup Permission Errors**: Resolved "Access Denied" errors when backing up locked files (e.g., qBittorrent plugins)
+- **Python 3.13 Compatibility**: Fixed file copy operations to work across all Python versions
+- **Locked File Handling**: Backup now gracefully skips locked files and logs warnings instead of failing
+
+### 🔧 Improvements
+- **Robust File Copying**: Implemented custom recursive copy function that handles permission errors
+- **Better Error Logging**: All skipped files during backup are now logged for troubleshooting
+- **Version Metadata**: Added proper `__version__`, `__author__`, `__license__`, and `__copyright__` attributes
+
+---
+
 ## [1.3] - February 13, 2026
 
 ### 🎨 UI/UX Improvements

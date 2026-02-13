@@ -8,7 +8,7 @@ import tempfile
 # Avoid Permission issues for multiple instances
 os.environ['GST_REGISTRY'] = os.path.join(tempfile.gettempdir(), "registry.bin")
 
-CURRENT_VERSION = "1.3"
+CURRENT_VERSION = "1.4"
 
 
 class SettingsScreen(Screen):

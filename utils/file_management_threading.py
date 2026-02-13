@@ -35,8 +35,24 @@ def backup_data(backup_location, backup_date, progress_callback):
         localappdata_backup = os.path.join(backup_dir, "localappdata")
         appdata_backup = os.path.join(backup_dir, "appdata")
 
-        shutil.copytree(localappdata_path, localappdata_backup)
-        shutil.copytree(appdata_path, appdata_backup)
+        # Manual copy function that skips locked files
+        def copy_tree_safe(src, dst):
+            """Copy directory tree, skipping files that can't be accessed"""
+            os.makedirs(dst, exist_ok=True)
+            for item in os.listdir(src):
+                src_path = os.path.join(src, item)
+                dst_path = os.path.join(dst, item)
+                try:
+                    if os.path.isdir(src_path):
+                        copy_tree_safe(src_path, dst_path)
+                    else:
+                        shutil.copy2(src_path, dst_path)
+                except (PermissionError, OSError) as e:
+                    log_message("WARNING", f"Skipping file due to access error: {src_path} - {e}")
+                    continue
+
+        copy_tree_safe(localappdata_path, localappdata_backup)
+        copy_tree_safe(appdata_path, appdata_backup)
 
         zip_path = os.path.join(backup_location, f"qSHIELD_Qbt_Backup_{backup_date}.zip")
         with zipfile.ZipFile(zip_path, "w") as backup_zip:
@@ -46,7 +62,10 @@ def backup_data(backup_location, backup_date, progress_callback):
             for folder_name, subfolders, filenames in os.walk(backup_dir):
                 for filename in filenames:
                     file_path = os.path.join(folder_name, filename)
-                    backup_zip.write(file_path, os.path.relpath(file_path, backup_dir))
+                    try:
+                        backup_zip.write(file_path, os.path.relpath(file_path, backup_dir))
+                    except (PermissionError, OSError) as e:
+                        log_message("WARNING", f"Skipping file in zip: {file_path} - {e}")
                     processed_files += 1
                     progress = (processed_files / total_files) * 100
                     progress_callback(progress)

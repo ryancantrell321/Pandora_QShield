@@ -1,12 +1,12 @@
 """  
 Pandora QShield
-Version: 1.3
+Version: 1.4
 Author: Pandora Dynamics
 Release: February 2026
 Copyright: RyanCantrell321, Pandora Dynamics
 License: Proprietary - All Rights Reserved
 """
-__version__ = "1.3"
+__version__ = "1.4"
 __author__ = "RyanCantrell321, Pandora Dynamics"
 __license__ = "Proprietary - All Rights Reserved"
 __copyright__ = "© 2024-2026 Pandora Dynamics, RyanCantrell321. All Rights Reserved"
@@ -27,7 +27,7 @@ import tempfile
 
 # Import modules
 from screens import MainScreen, BackupScreen, RestoreScreen, SettingsScreen
-from utils import log_message, acquire_lock, release_lock, start_cleaner, fatal_error, get_ui_path, get_asset_path
+from utils import log_message, acquire_lock, release_lock, start_cleaner, fatal_error, get_ui_path, get_asset_path, check_for_updates
 
 # Avoid Permission issues for multiple instances
 os.environ['GST_REGISTRY'] = os.path.join(tempfile.gettempdir(), "registry.bin")
@@ -79,6 +79,11 @@ try:
             log_message("INFO", "Settings Screen Loaded")
 
             return sm
+        
+        def on_start(self):
+            """Called when the application starts"""
+            log_message("INFO", "Application started, checking for updates...")
+            check_for_updates(show_no_update=False)
 
         def minimize_window(self):
             Window.minimize()
